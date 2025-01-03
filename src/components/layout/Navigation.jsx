@@ -9,6 +9,7 @@ import HomeIcon from '@mui/icons-material/Home';
 import AssessmentIcon from '@mui/icons-material/Assessment';
 import BarChartIcon from '@mui/icons-material/BarChart';
 import { useNavigate, useLocation } from 'react-router-dom';
+import logo from '../../assets/logo.png';
 
 function Navigation() {
     const navigate = useNavigate();
@@ -31,7 +32,7 @@ function Navigation() {
             <Toolbar>
                 <Box sx={{ display: 'flex', alignItems: 'center', mr: 4 }}>
                     <img 
-                        src="/logo.png"
+                        src={logo}
                         alt="Logo"
                         style={{ 
                             height: '40px',

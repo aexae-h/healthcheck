@@ -1,9 +1,11 @@
+import { useState, useEffect } from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import { ThemeProvider, createTheme } from '@mui/material';
 import Layout from './components/layout/Layout';
 import Home from './pages/Home';
 import Assessment from './pages/Assessment';
 import Results from './pages/Results';
+import Login from './components/auth/Login';
 import { AssessmentProvider } from './context/AssessmentContext';
 
 // Erweitertes Theme mit Custom-Farben und Styling
@@ -70,20 +72,37 @@ const theme = createTheme({
 });
 
 function App() {
+  const [isAuthenticated, setIsAuthenticated] = useState(false);
+
+  useEffect(() => {
+      const auth = localStorage.getItem('isAuthenticated');
+      if (auth === 'true') {
+          setIsAuthenticated(true);
+      }
+  }, []);
+
+  if (!isAuthenticated) {
+      return (
+          <ThemeProvider theme={theme}>
+              <Login onLogin={() => setIsAuthenticated(true)} />
+          </ThemeProvider>
+      );
+  }
+
   return (
-    <ThemeProvider theme={theme}>
-      <AssessmentProvider>
-        <Router>
-          <Layout>
-            <Routes>
-              <Route path="/" element={<Home />} />
-              <Route path="/assessment" element={<Assessment />} />
-              <Route path="/results" element={<Results />} />
-            </Routes>
-          </Layout>
-        </Router>
-      </AssessmentProvider>
-    </ThemeProvider>
+      <ThemeProvider theme={theme}>
+          <AssessmentProvider>
+              <Router>
+                  <Layout>
+                      <Routes>
+                          <Route path="/" element={<Home />} />
+                          <Route path="/assessment" element={<Assessment />} />
+                          <Route path="/results" element={<Results />} />
+                      </Routes>
+                  </Layout>
+              </Router>
+          </AssessmentProvider>
+      </ThemeProvider>
   );
 }
 

@@ -2,7 +2,7 @@
   "name": "reifegradassessment",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://[dein-username].github.io/[repo-name]",
+  "homepage": "https://aexae-h.github.io/healthcheck",
   "dependencies": {
     "@emotion/styled": "^11.14.0",
     "@mui/icons-material": "^6.3.1",
