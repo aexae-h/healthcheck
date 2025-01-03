@@ -1,0 +1,10 @@
+{
+  "files": {
+    "main.js": "/healthcheck/static/js/main.742e0f49.js",
+    "index.html": "/healthcheck/index.html",
+    "main.742e0f49.js.map": "/healthcheck/static/js/main.742e0f49.js.map"
+  },
+  "entrypoints": [
+    "static/js/main.742e0f49.js"
+  ]
+}
