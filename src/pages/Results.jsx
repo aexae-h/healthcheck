@@ -123,40 +123,49 @@ function Results() {
         document.body.removeChild(link);
     };
 
+    const calculateCategoryProgress = (category) => {
+        const totalQuestions = category.Fragen.length;
+        const answeredQuestions = category.Fragen.filter(question => 
+            answers[`${category.Nummer}-${question.Unternummer}`]
+        ).length;
+        
+        return (answeredQuestions / totalQuestions) * 100;
+    };
+    
     const calculateCategoryScore = (category) => {
         let totalScore = 0;
         let answeredQuestions = 0;
-
+    
         category.Fragen.forEach(question => {
             const answer = answers[`${category.Nummer}-${question.Unternummer}`];
             if (answer) {
-                // Extrahiere die Nummer aus "Reifegrad X"
                 const grade = parseInt(answer.split(' ')[1]);
                 totalScore += grade;
                 answeredQuestions++;
             }
         });
-
+    
         return answeredQuestions > 0 ? totalScore / answeredQuestions : 0;
     };
-
+    
     const renderOverview = () => (
         <Card>
             <CardContent>
                 <Typography variant="h6" gutterBottom>
-                    Gesamtübersicht
+                    Übersicht der Kategorien
                 </Typography>
                 <Table>
                     <TableHead>
                         <TableRow>
                             <TableCell>Kategorie</TableCell>
                             <TableCell>Durchschnittlicher Reifegrad</TableCell>
-                            <TableCell>Visualisierung</TableCell>
+                            <TableCell>Bearbeitungsfortschritt</TableCell>
                         </TableRow>
                     </TableHead>
                     <TableBody>
                         {assessmentData.map(category => {
                             const score = calculateCategoryScore(category);
+                            const progress = calculateCategoryProgress(category);
                             return (
                                 <TableRow key={category.Nummer}>
                                     <TableCell>{category.Gruppenname}</TableCell>
@@ -169,11 +178,20 @@ function Results() {
                                         />
                                     </TableCell>
                                     <TableCell>
-                                        <LinearProgress 
-                                            variant="determinate" 
-                                            value={(score/5)*100}
-                                            sx={{ height: 10, borderRadius: 5 }}
-                                        />
+                                        <Box sx={{ display: 'flex', alignItems: 'center', gap: 1 }}>
+                                            <LinearProgress 
+                                                variant="determinate" 
+                                                value={progress}
+                                                sx={{ 
+                                                    height: 10, 
+                                                    borderRadius: 5,
+                                                    flexGrow: 1
+                                                }}
+                                            />
+                                            <Typography variant="body2" color="text.secondary">
+                                                {Math.round(progress)}%
+                                            </Typography>
+                                        </Box>
                                     </TableCell>
                                 </TableRow>
                             );
