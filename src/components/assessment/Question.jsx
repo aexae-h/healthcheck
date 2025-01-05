@@ -36,6 +36,13 @@ function Question() {
         answers[questionKey] || ''
     );
 
+    const getBackgroundColor = (grade) => {
+        const level = parseInt(grade.split(' ')[1]);
+        if (level <= 2) return 'rgba(254, 226, 226, 0.6)';     // helles Rot
+        if (level === 3) return 'rgba(254, 249, 195, 0.6)';    // helles Gelb
+        return 'rgba(220, 252, 231, 0.6)';                     // helles Grün
+    };
+
     // Reset selectedValue wenn sich die Frage ändert
     useEffect(() => {
         setSelectedValue(answers[questionKey] || '');

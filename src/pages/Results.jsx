@@ -15,24 +15,98 @@ import {
     Rating,
     LinearProgress
 } from '@mui/material';
+import UploadIcon from '@mui/icons-material/Upload';
 import DownloadIcon from '@mui/icons-material/Download';
 import { useAssessment } from '../context/AssessmentContext';
 import { assessmentData } from '../data/questions';
 import SpiderChart from '../components/results/SpiderChart'
+import { useNavigate } from 'react-router-dom';
 
 function Results() {
-    const { answers } = useAssessment();
+    const navigate = useNavigate();
+    const { answers, saveAnswer, assessmentInfo, setAssessmentInfo } = useAssessment();
     const [currentTab, setCurrentTab] = useState(0);
 
+
+    const handleFileUpload = (event) => {
+        const file = event.target.files[0];
+        if (file) {
+            const reader = new FileReader();
+            reader.onload = (e) => {
+                const text = e.target.result;
+                const lines = text.split('\n');
+                
+                let isMetadata = false;
+                let isData = false;
+                const newAnswers = {};
+                
+                lines.forEach(line => {
+                    if (line.trim() === '#METADATA') {
+                        isMetadata = true;
+                        isData = false;
+                        return;
+                    }
+                    if (line.trim() === '#DATA') {
+                        isMetadata = false;
+                        isData = true;
+                        return;
+                    }
+                    
+                    if (isMetadata) {
+                        const [key, value] = line.split(',');
+                        if (key === 'Kundenname') {
+                            setAssessmentInfo(prev => ({ ...prev, customerName: value }));
+                        } else if (key === 'Datum') {
+                            setAssessmentInfo(prev => ({ ...prev, assessmentDate: value }));
+                        }
+                    }
+                    
+                    if (isData && line.trim() && !line.startsWith('Kategorie')) {
+                        const [category, question, grade] = line.split(',');
+                        if (grade && grade.trim() && grade.trim() !== 'Nicht beantwortet') {
+                            const categoryData = assessmentData.find(cat => 
+                                cat.Gruppenname === category.trim()
+                            );
+                            
+                            if (categoryData) {
+                                const questionData = categoryData.Fragen.find(q => 
+                                    q.Frage.replace(/,/g, ';').replace(/\n/g, ' ') === question.trim()
+                                );
+                                
+                                if (questionData) {
+                                    const key = `${categoryData.Nummer}-${questionData.Unternummer}`;
+                                    newAnswers[key] = grade.trim();
+                                }
+                            }
+                        }
+                    }
+                });
+
+                // Setze alle Antworten
+                Object.entries(newAnswers).forEach(([key, value]) => {
+                    const [categoryNum, questionNum] = key.split('-');
+                    saveAnswer(categoryNum, questionNum, value);
+                });
+
+                alert(`Import erfolgreich abgeschlossen! ${Object.keys(newAnswers).length} Antworten importiert.`);
+                navigate('/assessment');
+            };
+            reader.readAsText(file);
+        }
+    };
+
     const downloadCSV = () => {
-        // CSV Header
-        let csvContent = "Kategorie,Frage,Reifegrad\n";
+        // Metadata Header
+        let csvContent = `#METADATA\n`;
+        csvContent += `Kundenname,${assessmentInfo.customerName}\n`;
+        csvContent += `Datum,${assessmentInfo.assessmentDate}\n`;
+        csvContent += `#DATA\n`;
+        csvContent += "Kategorie,Frage,Reifegrad\n";
 
         // Daten sammeln
         assessmentData.forEach(category => {
             category.Fragen.forEach(question => {
                 const answer = answers[`${category.Nummer}-${question.Unternummer}`] || 'Nicht beantwortet';
-                // Bereinige Texte von Kommas und Zeilenumbrüchen
                 const cleanQuestion = question.Frage.replace(/,/g, ';').replace(/\n/g, ' ');
                 csvContent += `${category.Gruppenname},${cleanQuestion},${answer}\n`;
             });
@@ -155,7 +229,7 @@ function Results() {
     return (
         <Box>
 
-            <Box sx={{ 
+<Box sx={{ 
                 display: 'flex', 
                 justifyContent: 'space-between', 
                 alignItems: 'center',
@@ -164,14 +238,31 @@ function Results() {
                 <Typography variant="h4">
                     Ergebnisse des Assessments
                 </Typography>
-                <Button 
-                    variant="contained" 
-                    startIcon={<DownloadIcon />}
-                    onClick={downloadCSV}
-                    sx={{ ml: 2 }}
-                >
-                    Als CSV exportieren
-                </Button>
+                <Box>
+                    {/* Neuer Import-Button */}
+                    <Button
+                        component="label"
+                        variant="outlined"
+                        startIcon={<UploadIcon />}
+                        sx={{ mr: 2 }}
+                    >
+                        CSV importieren
+                        <input
+                            type="file"
+                            hidden
+                            accept=".csv"
+                            onChange={handleFileUpload}
+                        />
+                    </Button>
+                    {/* Existierender Export-Button */}
+                    <Button 
+                        variant="contained" 
+                        startIcon={<DownloadIcon />}
+                        onClick={downloadCSV}
+                    >
+                        Als CSV exportieren
+                    </Button>
+                </Box>
             </Box>
             
             <Tabs value={currentTab} onChange={(_, newValue) => setCurrentTab(newValue)} sx={{ mb: 3 }}>
