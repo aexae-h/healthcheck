@@ -1,11 +1,11 @@
 {
   "files": {
-    "main.js": "/healthcheck/static/js/main.6d2a9394.js",
+    "main.js": "/healthcheck/static/js/main.f881b3ae.js",
     "static/media/logo.png": "/healthcheck/static/media/logo.7d7e8c9208596c977151.png",
     "index.html": "/healthcheck/index.html",
-    "main.6d2a9394.js.map": "/healthcheck/static/js/main.6d2a9394.js.map"
+    "main.f881b3ae.js.map": "/healthcheck/static/js/main.f881b3ae.js.map"
   },
   "entrypoints": [
-    "static/js/main.6d2a9394.js"
+    "static/js/main.f881b3ae.js"
   ]
 }
