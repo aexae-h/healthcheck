@@ -13,7 +13,10 @@ export function AssessmentProvider({ children }) {
         const savedInfo = localStorage.getItem('assessmentInfo');
         return savedInfo ? JSON.parse(savedInfo) : {
             customerName: '',
-            assessmentDate: new Date().toISOString().split('T')[0]
+            assessmentDate: new Date().toISOString().split('T')[0],
+            industry: '',
+            employeeCount: '',
+            auditFocus: ''      // Neues Feld statt annualRevenue
         };
     });
 

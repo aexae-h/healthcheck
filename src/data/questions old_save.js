@@ -171,6 +171,20 @@ export const assessmentData = [
         "Fragen": [
             {
                 "Unternummer": 3.1,
+                "Frage": "Gibt es Bereiche, in denen Sie glauben, dass die Einführung neuer Technologien Vorteile bringen könnte? Reflektionsfrage",
+                "Ziel": "Identifikation von Möglichkeiten zur Technologisierung.",
+                "Notwendig": NaN,
+                "Muss": NaN,
+                "Reifegrade": {
+                    "Reifegrad 1": NaN,
+                    "Reifegrad 2": NaN,
+                    "Reifegrad 3": NaN,
+                    "Reifegrad 4": NaN,
+                    "Reifegrad 5": NaN
+                }
+            },
+            {
+                "Unternummer": 3.2,
                 "Frage": "Welche Software und Systeme nutzen Sie zur Unterstützung Ihrer Geschäftsprozesse?",
                 "Ziel": "Einsatz von Technologie zur Effizienzsteigerung.",
                 "Notwendig": "Das Unternehmen verwendet spezialisierte Softwarelösungen für verschiedene Geschäftsbereiche (z.B. ERP, CRM), die jedoch nur teilweise integriert sind/ Es gibt einen gewissen Grad an Automatisierung, aber einige Prozesse erfordern noch manuelle Eingriffe.",
@@ -184,7 +198,7 @@ export const assessmentData = [
                 }
             },
             {
-                "Unternummer": 3.2,
+                "Unternummer": 3.3,
                 "Frage": "Sind Ihre aktuellen IT-Systeme ausreichend, um Ihre Geschäftsanforderungen zu erfüllen?",
                 "Ziel": "Bewertung der IT-Systeme in Bezug auf Geschäftsanforderungen.",
                 "Notwendig": "Die IT-Systeme des Unternehmens sind weitgehend ausreichend/ Es gibt funktionale Systeme für die wichtigsten Geschäftsprozesse, aber die Integration und die Automatisierung sind nicht vollständig implementiert/ Die Systeme werden regelmäßig aktualisiert, jedoch nicht immer in allen Bereichen gleichmäßig.",
@@ -198,7 +212,7 @@ export const assessmentData = [
                 }
             },
             {
-                "Unternummer": 3.3,
+                "Unternummer": 3.4,
                 "Frage": "Welche Maßnahmen hat Ihr Unternehmen implementiert, um  sicherzustellen, dass es widerstandsfähig gegenüber Cyberangriffen ist?",
                 "Ziel": "Individuelle Definition von Cyberresilienz i.V.m. Strategien zur Prävention, Erkennung, Reaktion als auch Wiederherstellung.",
                 "Notwendig": "Das Unternehmen hat eine Cyberresilienz-Strategie entwickelt, die regelmäßige Sicherheitsüberprüfungen, Risikobewertungen und Audits umfasst/ Es sind fortschrittlichere Maßnahmen wie Verschlüsselung, Zwei-Faktor-Authentifizierung und Netzwerksegmentierung implementiert.",
@@ -212,7 +226,7 @@ export const assessmentData = [
                 }
             },
             {
-                "Unternummer": 3.4,
+                "Unternummer": 3.5,
                 "Frage": "Wie kontrollieren und optimieren Sie die Qualität Ihres Produkts oder Ihrer Dienstleistung? Welche Technologie nutzen Sie hierbei?",
                 "Ziel": "Funktionierendes Qualitätsmanagement und Zukunftsorientierung.",
                 "Notwendig": "Qualität wird regelmäßig überwacht, z. B. durch standardisierte Prüfprozesse, Tests oder Audits.\nErste Technologien wie Softwaretools zur Datenerfassung und Analyse unterstützen die Qualitätskontrolle.",
@@ -224,20 +238,6 @@ export const assessmentData = [
                     "Reifegrad 4": "Es existieren umfassende, standardisierte Qualitätsmanagementsysteme, die alle Produktions- oder Dienstleistungsprozesse abdecken.",
                     "Reifegrad 5": "Qualitätskontrollprozesse sind vollständig automatisiert und integrieren sich nahtlos in alle Produktions- oder Dienstleistungsbereiche./ Das Unternehmen nutzt fortschrittliche Technologien wie KI, maschinelles Lernen oder IoT (Internet of Things), um die Qualität in Echtzeit zu überwachen und proaktiv zu optimieren."
                 }
-            },
-            {
-                "Unternummer": 3.5,
-                "Frage": "Gibt es Bereiche, in denen Sie glauben, dass die Einführung neuer Technologien Vorteile bringen könnte? Reflektionsfrage",
-                "Ziel": "Identifikation von Möglichkeiten zur Technologisierung.",
-                "Notwendig": NaN,
-                "Muss": NaN,
-                "Reifegrade": {
-                    "Reifegrad 1": NaN,
-                    "Reifegrad 2": NaN,
-                    "Reifegrad 3": NaN,
-                    "Reifegrad 4": NaN,
-                    "Reifegrad 5": NaN
-                }
             }
         ]
     },
@@ -247,6 +247,20 @@ export const assessmentData = [
         "Fragen": [
             {
                 "Unternummer": 4.1,
+                "Frage": "Welche Strategien setzen Sie ein, um Neukunden zu gewinnen und bestehende Kunden langfristig zu binden? Reflektionsfrage",
+                "Ziel": "Einblicke in die Marketing- und Vertriebsstrategien.",
+                "Notwendig": NaN,
+                "Muss": NaN,
+                "Reifegrade": {
+                    "Reifegrad 1": NaN,
+                    "Reifegrad 2": NaN,
+                    "Reifegrad 3": NaN,
+                    "Reifegrad 4": NaN,
+                    "Reifegrad 5": NaN
+                }
+            },
+            {
+                "Unternummer": 4.2,
                 "Frage": "Wie gut kennen Sie Ihre Kunden und deren Bedürfnisse? Wie schätzen Sie Ihre Kundenorientierung ein?",
                 "Ziel": "Kundenorientierung sicherstellen.",
                 "Notwendig": "Unternehmen sammelt regelmäßig Kundenfeedback und führt Marktforschungen durch/ Informationen werden in einigen Bereichen analysiert und zur Verbesserung von Produkten oder Dienstleistungen verwendet/ Kundenbedürfnisse werden in Entscheidungsprozesse einbezogen, aber die Analyse bleibt oft auf bestimmte Segmente oder Bereiche beschränkt.",
@@ -260,7 +274,7 @@ export const assessmentData = [
                 }
             },
             {
-                "Unternummer": 4.2,
+                "Unternummer": 4.3,
                 "Frage": "Welche Maßnahmen ergreifen Sie, um die Kundenzufriedenheit zu messen und zu verbessern?",
                 "Ziel": "Sicherstellung hoher Kundenzufriedenheit.",
                 "Notwendig": "Kundenzufriedenheit wird regelmäßig durch standardisierte Methoden wie Umfragen, Net Promoter Score (NPS) oder Kundenfeedback-Formulare gemessen/ Die gesammelten Daten werden in bestimmten Bereichen analysiert, aber die Umsetzung von Verbesserungen erfolgt nur in ausgewählten Bereichen.",
@@ -274,7 +288,7 @@ export const assessmentData = [
                 }
             },
             {
-                "Unternummer": 4.3,
+                "Unternummer": 4.4,
                 "Frage": "Haben Sie Strategien zur Kundenbindung und wie erfolgreich sind diese?",
                 "Ziel": "Langfristige Kundenbindung und Erhöhung des Kundenwerts.",
                 "Notwendig": "Das Unternehmen hat eine klar definierte Kundenbindungsstrategie, die in regelmäßigen Abständen umgesetzt wird/ Es gibt spezifische Programme oder Aktionen (z.B. Treueprogramme, personalisierte Angebote), um Kunden langfristig zu binden.",
@@ -288,7 +302,7 @@ export const assessmentData = [
                 }
             },
             {
-                "Unternummer": 4.4,
+                "Unternummer": 4.5,
                 "Frage": "Wie managen Sie die Beziehungen zu Ihren Lieferanten und Partnern?",
                 "Ziel": "Strategien und Prozesse für das Sourcing, Aufschluss über stabile Lieferketten.",
                 "Notwendig": "Lieferanten- und Partnerbeziehungen werden regelmäßig gepflegt, und es gibt definierte Prozesse für Kommunikation und Zusammenarbeit/ Es werden regelmäßige Leistungsbewertungen durchgeführt, und es gibt KPIs (Key Performance Indicators) zur Überwachung der Zusammenarbeit.",
@@ -300,20 +314,6 @@ export const assessmentData = [
                     "Reifegrad 4": "Das Unternehmen hat ein strategisches Managementsystem für Lieferanten- und Partnerbeziehungen implementiert/ Es werden regelmäßige Meetings, Leistungsbewertungen und gemeinsame Projekte durchgeführt, um die Zusammenarbeit zu stärken und Innovationen zu fördern.",
                     "Reifegrad 5": "Lieferanten- und Partnerbeziehungen sind vollständig in die Geschäftsstrategie integriert und werden auf Basis von Vertrauen, Zusammenarbeit und gemeinsamen Zielen aufgebaut/ Lieferanten- und Partnerbeziehungen werden kontinuierlich überwacht und verbessert, und es besteht ein hochentwickeltes Risikomanagement/ Das Unternehmen nutzt fortschrittliche Technologien wie digitale Plattformen, um Echtzeit-Kommunikation und Zusammenarbeit zu ermöglichen."
                 }
-            },
-            {
-                "Unternummer": 4.5,
-                "Frage": "Welche Strategien setzen Sie ein, um Neukunden zu gewinnen und bestehende Kunden langfristig zu binden? Reflektionsfrage",
-                "Ziel": "Einblicke in die Marketing- und Vertriebsstrategien.",
-                "Notwendig": NaN,
-                "Muss": NaN,
-                "Reifegrade": {
-                    "Reifegrad 1": NaN,
-                    "Reifegrad 2": NaN,
-                    "Reifegrad 3": NaN,
-                    "Reifegrad 4": NaN,
-                    "Reifegrad 5": NaN
-                }
             }
         ]
     },
@@ -323,6 +323,20 @@ export const assessmentData = [
         "Fragen": [
             {
                 "Unternummer": 5.1,
+                "Frage": "Wie bewerten Sie die finanzielle Stabilität Ihres Unternehmens (Schuldenstand und Jahresergebnis)? Reflektionsfrage",
+                "Ziel": NaN,
+                "Notwendig": NaN,
+                "Muss": NaN,
+                "Reifegrade": {
+                    "Reifegrad 1": NaN,
+                    "Reifegrad 2": NaN,
+                    "Reifegrad 3": NaN,
+                    "Reifegrad 4": NaN,
+                    "Reifegrad 5": NaN
+                }
+            },
+            {
+                "Unternummer": 5.2,
                 "Frage": "Wie oft analysieren Sie ihre vorhandene Finanzberichte und Kennzahlen?",
                 "Ziel": "Sicherstellung der kontinuierlichen Prozessoptimierung.",
                 "Notwendig": "Finanzberichte und Kennzahlen werden regelmäßig analysiert, z.B. monatlich oder vierteljährlich/ Die Analysen konzentrieren sich auf grundlegende Kennzahlen wie Umsatz, Kosten und Gewinn, jedoch ohne tiefere Einblicke in komplexere Finanzaspekte/ Die Analysen konzentrieren sich auf grundlegende Kennzahlen wie Umsatz, Kosten und Gewinn, jedoch ohne tiefere Einblicke in komplexere Finanzaspekte.",
@@ -336,7 +350,7 @@ export const assessmentData = [
                 }
             },
             {
-                "Unternummer": 5.2,
+                "Unternummer": 5.3,
                 "Frage": "Welche finanziellen Kennzahlen sind für Sie am wichtigsten und sind diese in Finanzberichten vorhanden?",
                 "Ziel": "Sicherstellung der finanziellen Überwachung und Steuerung.",
                 "Notwendig": "Die wichtigsten finanziellen Kennzahlen wie Umsatz, Kosten, Gewinnmargen, Cashflow und Schulden werden in den Finanzberichten regelmäßig erfasst/ Es gibt jedoch noch Lücken bei einigen Kennzahlen/ Die Kennzahlen werden zur Analyse und zur Unterstützung von Entscheidungen verwendet, aber es fehlt eine vollständige Integration in die strategischen Planungen.",
@@ -350,7 +364,7 @@ export const assessmentData = [
                 }
             },
             {
-                "Unternummer": 5.3,
+                "Unternummer": 5.4,
                 "Frage": "Haben Sie ein Budgetierungssystem und halten Sie sich genau daran?",
                 "Ziel": "Fokus auf wesentliche finanzielle Steuerungsgrößen.",
                 "Notwendig": "Das Unternehmen verfügt über ein formelles Budgetierungssystem, das für alle Geschäftsbereiche verwendet wird/Budgets werden systematisch erstellt, z.B. jährlich, und es gibt regelmäßige Überprüfungen (z.B. monatlich oder vierteljährlich) zur Überwachung der Budgeteinhaltung/ Finanzielle Entscheidungen werden weitgehend im Rahmen des Budgets getroffen.",
@@ -364,7 +378,7 @@ export const assessmentData = [
                 }
             },
             {
-                "Unternummer": 5.4,
+                "Unternummer": 5.5,
                 "Frage": "Wie handhaben Sie ihre Forderungen und Verbindlichkeiten?",
                 "Ziel": "Kontrolle der Liquidität.",
                 "Notwendig": "Es gibt klare Prozesse zur Erfassung und Überwachung von Forderungen und Verbindlichkeiten/ Zahlungseingänge und -ausgänge werden regelmäßig überprüft, und es gibt Mechanismen zur Nachverfolgung von ausstehenden Forderungen.",
@@ -376,20 +390,6 @@ export const assessmentData = [
                     "Reifegrad 4": "Das Unternehmen verfügt über ein integriertes System zur Verwaltung von Forderungen und Verbindlichkeiten, das regelmäßig überwacht wird/ Es gibt klare Prozesse zur zeitnahen Eintreibung von Forderungen und zur Vermeidung von Zahlungsverzögerungen/ Automatisierte Systeme unterstützen die Verwaltung von Forderungen und Verbindlichkeiten, um Fehler und Verzögerungen zu minimieren.",
                     "Reifegrad 5": "Das Unternehmen nutzt fortschrittliche, datengetriebene Systeme, um Forderungen und Verbindlichkeiten in Echtzeit zu überwachen und zu managen/ Es gibt eine umfassende Liquiditätsplanung, die sowohl Forderungen als auch Verbindlichkeiten einbezieht, um finanzielle Stabilität zu gewährleisten/ Verbindlichkeiten und Forderungen werden vollständig optimiert, um den Cashflow zu maximieren und die finanzielle Gesundheit des Unternehmens zu fördern."
                 }
-            },
-            {
-                "Unternummer": 5.5,
-                "Frage": "Wie bewerten Sie die finanzielle Stabilität Ihres Unternehmens (Schuldenstand und Jahresergebnis)? Reflektionsfrage",
-                "Ziel": NaN,
-                "Notwendig": NaN,
-                "Muss": NaN,
-                "Reifegrade": {
-                    "Reifegrad 1": NaN,
-                    "Reifegrad 2": NaN,
-                    "Reifegrad 3": NaN,
-                    "Reifegrad 4": NaN,
-                    "Reifegrad 5": NaN
-                }
             }
         ]
     },
@@ -399,7 +399,7 @@ export const assessmentData = [
         "Fragen": [
             {
                 "Unternummer": 6.1,
-                "Frage": "Liegen ihnen detailierte Informationen über die erziehlten Erträge vor (Selektierbar nach Geschäftsbereich, Linien, Produktgruppen etc.?)",
+                "Frage": "Liegen ihnen detailierte Informationen über die erziehlten Erträge vor (Selektierbar nach Geschäftsbereich, Linien, Produktgruppen etc.?",
                 "Ziel": "Schaffbarkeit der Steuerung zur Verbesserung respektive zur Erhaltung der Erträge.",
                 "Notwendig": "Detaillierte Informationen über die erzielten Erträge liegen vor und können nach wesentlichen Kategorien wie Geschäftsbereich, Produktlinie oder Produktgruppe selektiert werden/ Finanzberichte bieten regelmäßig eine Aufschlüsselung der Erträge nach relevanten Kategorien, aber es gibt noch Optimierungspotenzial bei der Tiefe und Flexibilität der Analyse/ Die Ertragsdaten werden in mehreren Bereichen für die Entscheidungsfindung herangezogen, aber eine tiefere Segmentierung (z.B. Kundenebene) fehlt.",
                 "Muss": "Das Unternehmen verfügt über ein fortschrittliches, datengetriebenes System, das Echtzeit-Einblicke in die erzielten Erträge bietet und nach beliebigen Kategorien (z.B. Geschäftsbereich, Linie, Produktgruppe, Region, Kunden) selektierbar ist/ Die Ertragsdaten fließen in Echtzeit in die Finanzberichte ein und werden kontinuierlich genutzt, um strategische Anpassungen und Optimierungen vorzunehmen/ Das Unternehmen nutzt diese Daten nicht nur zur internen Analyse, sondern auch zur Vorhersage zukünftiger Entwicklungen und zur Optimierung der Geschäftsentwicklung.",
@@ -495,6 +495,20 @@ export const assessmentData = [
         "Fragen": [
             {
                 "Unternummer": 8.1,
+                "Frage": "Wie gestalten Sie den Recruitment und Onboarding Prozezss? Reflektionsfrage",
+                "Ziel": "effektives Recruitment und Onboarding.",
+                "Notwendig": NaN,
+                "Muss": NaN,
+                "Reifegrade": {
+                    "Reifegrad 1": NaN,
+                    "Reifegrad 2": NaN,
+                    "Reifegrad 3": NaN,
+                    "Reifegrad 4": NaN,
+                    "Reifegrad 5": NaN
+                }
+            },
+            {
+                "Unternummer": 8.2,
                 "Frage": "Wie stellen Sie Mitarbeiterzufriedenheit und Mitarbeiterbindung sicher?",
                 "Ziel": "Motivation und Zufriedenheit der Mitarbeiter sichern (MA Befragungen, Benefit Management)",
                 "Notwendig": "Mitarbeiterzufriedenheit wird regelmäßig durch Befragungen oder Feedback-Prozesse gemessen./ Es gibt klar definierte Maßnahmen, um die Zufriedenheit zu steigern, z.B. Benefits, flexible Arbeitszeiten oder Weiterbildungsangebote.",
@@ -508,7 +522,7 @@ export const assessmentData = [
                 }
             },
             {
-                "Unternummer": 8.2,
+                "Unternummer": 8.3,
                 "Frage": "Wie würden Sie die aktuelle Auslastung Ihrer Mitarbeiter bewerten?",
                 "Ziel": "Optimale Nutzung der personellen Ressourcen, Vermeidung von Überlastung oder Unterlastung des Personals.",
                 "Notwendig": "Regelmäßige Überwachung der Auslastung mit ersten Maßnahmen zur Optimierung/ Die Auslastung der Mitarbeiter wird regelmäßig erfasst und überwacht, z.B. wöchentlich oder monatlich/ Es gibt erste Maßnahmen zur Optimierung der Arbeitslast, um Überlastungen zu vermeiden und die Effizienz zu steigern.",
@@ -522,7 +536,7 @@ export const assessmentData = [
                 }
             },
             {
-                "Unternummer": 8.3,
+                "Unternummer": 8.4,
                 "Frage": "Haben Sie eine klare Übersicht über die Fähigkeiten und Kapazitäten Ihres Teams?",
                 "Ziel": "Sicherstellung einer effektiven Ressourcenzuweisung.",
                 "Notwendig": "Fähigkeiten und Kapazitäten der Teammitglieder werden regelmäßig erfasst und dokumentiert, z.B. in jährlichen Mitarbeiterbewertungen oder durch Tools/ Es gibt ein besseres Verständnis der verfügbaren Kapazitäten, und die Aufgabenverteilung erfolgt systematischer, aber es gibt noch Raum für Optimierung.",
@@ -536,7 +550,7 @@ export const assessmentData = [
                 }
             },
             {
-                "Unternummer": 8.4,
+                "Unternummer": 8.5,
                 "Frage": "Wie handhaben Sie die Weiterbildung und Entwicklung Ihrer Mitarbeiter?",
                 "Ziel": "Förderung der Mitarbeiterentwicklung und -motivation.",
                 "Notwendig": "Das Unternehmen bietet regelmäßige Weiterbildungsprogramme an, die an den aktuellen Bedürfnissen der Mitarbeiter und des Unternehmens ausgerichtet sind/ Die Weiterbildung wird regelmäßig überprüft, und es gibt festgelegte Maßnahmen zur Förderung der fachlichen und persönlichen Entwicklung.",
@@ -547,20 +561,6 @@ export const assessmentData = [
                     "Reifegrad 3": "Das Unternehmen bietet regelmäßige Weiterbildungsprogramme an, die an den aktuellen Bedürfnissen der Mitarbeiter und des Unternehmens ausgerichtet sind/ Die Weiterbildung wird regelmäßig überprüft, und es gibt festgelegte Maßnahmen zur Förderung der fachlichen und persönlichen Entwicklung.",
                     "Reifegrad 4": "Weiterbildung und Entwicklung der Mitarbeiter sind fest in die Unternehmensstrategie integriert, und es gibt klare, langfristige Entwicklungsziele für jeden Mitarbeiter/ Es werden strukturierte Programme zur Weiterbildung angeboten, die regelmäßig überprüft und aktualisiert werden, um den sich ändernden Anforderungen des Unternehmens gerecht zu werden.",
                     "Reifegrad 5": "Das Unternehmen nutzt datengetriebene Ansätze zur kontinuierlichen Überwachung und Förderung der Mitarbeiterentwicklung/ Weiterbildung und Entwicklung sind vollständig in die Unternehmensstrategie integriert und werden dynamisch an die aktuellen und zukünftigen Herausforderungen angepasst."
-                }
-            },
-            {
-                "Unternummer": 8.5,
-                "Frage": "Wie gestalten Sie den Recruitment und Onboarding Prozezss? Reflektionsfrage",
-                "Ziel": "effektives Recruitment und Onboarding.",
-                "Notwendig": NaN,
-                "Muss": NaN,
-                "Reifegrade": {
-                    "Reifegrad 1": NaN,
-                    "Reifegrad 2": NaN,
-                    "Reifegrad 3": NaN,
-                    "Reifegrad 4": NaN,
-                    "Reifegrad 5": NaN
                 }
             }
         ]
@@ -599,9 +599,9 @@ export const assessmentData = [
             },
             {
                 "Unternummer": 9.3,
-                "Frage": "Sind kritische IT-Prozesse abhängig von (außer-europäischen) Dienstleistern oder externen Partner? Haben Sie hierfür ein Datenschutzkonzept?",
-                "Ziel": "Bewertung der IT-Systeme in Bezug auf Datenschutz.",
-                "Notwendig": "Das Unternehmen ist in kritischen Bereichen teilweise von außer-europäischen Dienstleistern abhängig, jedoch gibt es definierte Kontrollmechanismen und Überwachung/ Es bestehen klare Verträge und SLAs/ Es gibt Konzepte zum Umgang mit Datenschutz auf diesen IT Plattformen.",
+                "Frage": "Sind kritische IT-Prozesse abhängig von außer-europäischen Dienstleistern oder externen Partner?",
+                "Ziel": "Bewertung der IT-Systeme in Bezug auf Ressilienz.",
+                "Notwendig": "Das Unternehmen ist in kritischen Bereichen teilweise von außer-europäischen Dienstleistern abhängig, jedoch gibt es definierte Kontrollmechanismen und Überwachung/ Es bestehen klare Verträge und SLAs.",
                 "Muss": "Kritische IT-Prozesse sind vollständig unabhängig von außer-europäischen Dienstleistern, und alle wesentlichen Systeme werden entweder intern verwaltet oder von europäischen Anbietern unterstützt/ Die IT-Infrastruktur ist so aufgebaut, dass sie den höchsten Datenschutz- und Sicherheitsstandards entspricht, ohne externe Abhängigkeiten, die Risiken bergen könnten.",
                 "Reifegrade": {
                     "Reifegrad 1": "Kritische IT-Prozesse sind vollständig von außer-europäischen Dienstleistern abhängig/ Es bestehen erhebliche Risiken in Bezug auf Datenschutz, Compliance und Abhängigkeit von Drittanbietern.",
@@ -629,7 +629,7 @@ export const assessmentData = [
                 "Unternummer": 9.5,
                 "Frage": "Werden die Mitarbeiter ausreichend über ihre Pflichten und die geltenden Vorschriften informiert?",
                 "Ziel": "Vermeidung von Bußgeldern, Schulung-/ Informationsprozesse bei Compliance Themen.",
-                "Notwendig": "Mitarbeiter werden regelmäßig über ihre Pflichten und die geltenden Vorschriften informiert, z.B. durch jährliche Schulungen oder Updates/ Es gibt klare Kommunikationskanäle, über die die relevanten Informationen weitergegeben werden, wie z.B. E-Mails, Aushänge Meetings oder interne Plattformen (Moodle)/ Die Informationen sind umfassend und decken die wichtigsten Pflichten und Vorschriften ab, aber es fehlen möglicherweise tiefergehende Schulungen zu spezifischen Themen.",
+                "Notwendig": "Mitarbeiter werden regelmäßig über ihre Pflichten und die geltenden Vorschriften informiert, z.B. durch jährliche Schulungen oder Updates/ Es gibt klare Kommunikationskanäle, über die die relevanten Informationen weitergegeben werden, wie z.B. E-Mails, Meetings oder interne Plattformen/ Die Informationen sind umfassend und decken die wichtigsten Pflichten und Vorschriften ab, aber es fehlen möglicherweise tiefergehende Schulungen zu spezifischen Themen.",
                 "Muss": "Mitarbeiter werden kontinuierlich und automatisch über ihre Pflichten und Vorschriften informiert, unterstützt durch digitale Tools und Lernplattformen/ Die Informationsweitergabe erfolgt in Echtzeit, und Mitarbeiter haben jederzeit Zugang zu relevanten Informationen und Schulungsressourcen/ Es gibt regelmäßige, datengetriebene Audits, um sicherzustellen, dass alle Mitarbeiter informiert sind und die Vorschriften einhalten.",
                 "Reifegrade": {
                     "Reifegrad 1": "Es gibt keine formellen Prozesse oder Schulungen, um Mitarbeiter über ihre Pflichten und geltenden Vorschriften zu informieren/ Mitarbeiter sind sich ihrer Pflichten und der geltenden Vorschriften oft nicht bewusst, was zu Missverständnissen und Regelverstößen führt.",

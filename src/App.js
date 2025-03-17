@@ -6,6 +6,7 @@ import Home from './pages/Home';
 import Assessment from './pages/Assessment';
 import Results from './pages/Results';
 import Login from './components/auth/Login';
+import Analyzer from './pages/Analyzer';
 import { AssessmentProvider } from './context/AssessmentContext';
 
 // Erweitertes Theme mit Custom-Farben und Styling
@@ -98,6 +99,7 @@ function App() {
                           <Route path="/" element={<Home />} />
                           <Route path="/assessment" element={<Assessment />} />
                           <Route path="/results" element={<Results />} />
+                          <Route path="/analyzer" element={<Analyzer />} /> {/* Neue Route */}
                       </Routes>
                   </Layout>
               </Router>
