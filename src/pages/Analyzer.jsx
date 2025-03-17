@@ -22,9 +22,6 @@ function Analyzer() {
     const [error, setError] = useState(null);
     const [progress, setProgress] = useState(0);
 
-    const CLAUDE_API_KEY = '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'; // In Produktion über Umgebungsvariablen!
-    const CLAUDE_API_URL = 'https://api.anthropic.com/v1/messages';
-
     const generateDetailedJSON = () => {
         return {
             metadata: {
